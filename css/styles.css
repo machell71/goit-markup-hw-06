@@ -494,11 +494,17 @@ body {
 }
 .footer-conteiner {
   display: flex;
-  gap: 70px;
+  /* gap: 70px; */
   align-items: baseline;
 }
+.div-address{
+ margin-right: 70px; 
+}
+.div-svg{
+  margin-right: 93px;
+}
 .foter-forma{
-  padding-left: 93px;
+
 }
 .footer-forma-form{
   display: flex;
@@ -556,9 +562,205 @@ fill:currentColor
 
 }
 
+
+/* form-modal */
+
+.modal-button {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.modal-button:hover,
+.modal-button:focus{
+color: var(--accent-color);
+
+}
+.close-icon {
+  fill: currentColor;
+}
+
+.form-title{
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.form-modal{
+  display: flex;
+  flex-direction: column;
+}
+.input-field  {
+ margin-bottom: 10px;
+}
+.input-title{
+margin-bottom: 4px;
+display: block;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.01em;
+
+color: #757575;
+}
+.input-wrap{
+  position: relative;
+}
+.form-input{
+  width: 100%; 
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  display: block;
+  padding-left: 42px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  transition-property:outline,border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:hover,
+.form-input:focus{
+  border-color: var(--accent-color);
+  outline: var(--accent-color);
+  fill: var(--accent-color);
+}
+.icons{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+left: 15px;
+
+transition-property:fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:hover + .icons,
+.form-input:focus + .icons{
+  fill: var(--accent-color);
+}
+
+
+.form-comment{
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+
+  transition-property:outline,border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comment:hover,
+.form-comment:focus{
+  border-color: var(--accent-color);
+  outline: var(--accent-color);
+}
+.form-comment::placeholder{
+font-weight: 400;
+font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+}
+.input-check{
+display: flex;
+position: absolute;
+white-space: nowrap;
+width: 1px;
+height: 1px;
+overflow: hidden;
+border: 0;
+padding: 0;
+clip: rect(0 0 0 0);
+clip-path: inset(50%);
+margin: -1px;
+}
+.input-check:checked + .check-text .span-check{
+background-color: var(--accent-color);
+border-color: var(--accent-color);
+}
+.input-check:focus + .check-text .span-check{
+  border-color: var(--accent-color);
+}
+.input-check:checked + .check-text .icons-check{
+  fill: var(--main-color);
+}
+.check-text{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.span-check{
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  margin-right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:background-color 250ms linear,border-color 250ms linear ;
+}
+.icons-check{
+  fill: transparent;
+  transition:fill 250ms linear;
+}
+.check-link{
+  color: var(--accent-color);
+  margin-left: 5px;
+}
+.button-send{
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  color: var(--main-color);
+}
+.button-send:hover{
+color: black;
+}
+
+
+
+
 /* -----portfolio----- */
 
-/* heder */
+
+
 
 /* filter */
 
@@ -623,10 +825,6 @@ fill:currentColor
 .filter-item {
   width: calc((100% - 60px) / 3);
   cursor: pointer;
-
-  /* transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .filter-item:hover,
 .filter-item:focus {
@@ -691,24 +889,11 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.modal-button {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-  position: absolute;
-  right: 8px;
-  top: 8px;
+  padding: 40px;
+}
 
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-}
-.close-icon {
-}
+
 .is-hidden{
   opacity: 0;
   visibility: hidden;
