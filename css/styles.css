@@ -580,6 +580,7 @@ fill:currentColor
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition:color 250ms linear;
 }
 .modal-button:hover,
 .modal-button:focus{
@@ -716,6 +717,7 @@ border-color: var(--accent-color);
   color: #757575;
 
   margin-bottom: 30px;
+  margin-left: 14px;
   display: flex;
   align-items: center;
 }
@@ -724,7 +726,7 @@ border-color: var(--accent-color);
   height: 15px;
   border: 2px solid #212121;
   border-radius: 3px;
-  margin-right: 8px;
+  margin-right: 5px;
 
   display: flex;
   align-items: center;
@@ -741,6 +743,12 @@ border-color: var(--accent-color);
   margin-left: 5px;
 }
 .button-send{
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+
+  cursor: pointer;
   width: 200px;
   height: 50px;
   margin: 0 auto;
@@ -749,6 +757,7 @@ border-color: var(--accent-color);
   border-radius: 4px;
   border: none;
   color: var(--main-color);
+  transition:color 250ms linear;
 }
 .button-send:hover{
 color: black;
